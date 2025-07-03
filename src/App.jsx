@@ -1,5 +1,7 @@
+import { TaskManager } from "./page/TaskManager";
+
 function App() {
-  return <h1>Hello there</h1>;
+  return <TaskManager />;
 }
 
 export default App;

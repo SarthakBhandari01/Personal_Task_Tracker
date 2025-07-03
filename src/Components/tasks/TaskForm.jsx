@@ -1,12 +1,29 @@
 import { useState } from "react";
 import "./task-form.css";
+import { useTask } from "../../hooks/useTask";
 
 export const TaskForm = ({ setShowAddTaskForm }) => {
   const [newTask, setNewTask] = useState({ title: "", description: "" });
+
+  const { tasks, setTasks } = useTask();
+
   function handleOnSubmit(e) {
     e.preventDefault();
-    console.log("form submitted");
+    if (!newTask.title.trim()) return;
+    console.log(Date.now().toString());
+    const task = {
+      id: Date.now().toString(),
+      title: newTask.title,
+      description: newTask.description,
+      completed: false,
+      createdAt: new Date().toISOString(),
+    };
+    console.log(tasks);
+    setTasks([...tasks, task]);
+    setNewTask({ title: "", description: "" });
+    setShowAddTaskForm(false);
   }
+
   return (
     <div className="modal-container">
       <div className=".modal">

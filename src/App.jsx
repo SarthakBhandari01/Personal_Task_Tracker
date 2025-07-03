@@ -1,7 +1,12 @@
+import TaskContext, { TaskContextProvider } from "./context/TaskContext";
 import { TaskManager } from "./page/TaskManager";
 
 function App() {
-  return <TaskManager />;
+  return (
+    <TaskContextProvider>
+      <TaskManager />
+    </TaskContextProvider>
+  );
 }
 
 export default App;

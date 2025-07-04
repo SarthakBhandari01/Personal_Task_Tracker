@@ -19,7 +19,7 @@ export const TaskManager = () => {
           Add Task
         </button>
       </div>
-      {showAddTaskForm && <TaskForm setShowAddTaskForm={setShowAddTaskForm} />}
+      {showAddTaskForm && <TaskaForm setShowAddTaskForm={setShowAddTaskForm} />}
       <TaskFilter />
       <TaskList />
     </div>

@@ -2,14 +2,21 @@ import { useTask } from "../../hooks/useTask";
 import { TaskItem } from "./TaskItem";
 
 export const TaskList = () => {
-  const { tasks } = useTask();
+  const { tasks, filter } = useTask();
+
+  const filteredTask = tasks.filter((task) => {
+    if (filter === "completed") return task.completed;
+    if (filter === "pending") return task.completed;
+    return true;
+  });
+
   return (
-    <div>
-      {tasks.length === 0 ? (
-        <div>task not found</div>
+    <div className="task-list">
+      {filteredTask.length === 0 ? (
+        <div className="empty-list">task not found</div>
       ) : (
-        tasks.map((task) => {
-          return <TaskItem task={task} />;
+        filteredTask.map((task) => {
+          return <TaskItem key={task.id} task={task} />;
         })
       )}
     </div>

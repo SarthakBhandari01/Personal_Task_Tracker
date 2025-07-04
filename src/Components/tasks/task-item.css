@@ -63,8 +63,8 @@
 
 .task-actions {
   display: flex;
-  gap: 8px;
-  margin-left: 12px;
+  gap: 13px;
+  margin-left: 10px;
 }
 
 .task-status.pending {

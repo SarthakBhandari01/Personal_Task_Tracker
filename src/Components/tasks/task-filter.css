@@ -18,6 +18,8 @@
   cursor: pointer;
   transition: all 0.2s ease;
   color: #64748b;
+  text-transform: capitalize;
+  outline: none;
 }
 
 .filter-tab.active {
@@ -29,4 +31,9 @@
 .filter-tab:not(.active):hover {
   background: #f8fafc;
   color: #1e293b;
+}
+
+.filter-tab:focus {
+  outline: 2px solid #3b82f6;
+  outline-offset: 2px;
 }

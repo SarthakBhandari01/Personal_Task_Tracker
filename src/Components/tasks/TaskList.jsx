@@ -1,5 +1,6 @@
 import { useTask } from "../../hooks/useTask";
 import { TaskItem } from "./TaskItem";
+import "./task-list.css";
 
 export const TaskList = () => {
   const { tasks, filter } = useTask();

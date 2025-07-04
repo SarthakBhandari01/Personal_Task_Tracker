@@ -32,7 +32,7 @@ export const TaskItem = ({ task }) => {
   }
 
   return (
-    <div className="task-item">
+    <div className={`task-item ${task.completed ? "completed" : "pending"}`}>
       <div className="task-content">
         <div className="task-header">
           <button

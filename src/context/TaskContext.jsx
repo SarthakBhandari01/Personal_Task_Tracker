@@ -1,6 +1,6 @@
 import { createContext, useEffect, useState } from "react";
 
-const TaskContext = createContext();  
+const TaskContext = createContext();
 
 export const TaskContextProvider = ({ children }) => {
   const [tasks, setTasks] = useState(() => {
@@ -11,6 +11,8 @@ export const TaskContextProvider = ({ children }) => {
   const [filter, setFilter] = useState("all");
 
   const [deleteConfirm, setDeleteConfirm] = useState(null);
+
+  const [searchQuery, setSearchQuery] = useState("");
 
   useEffect(() => {
     localStorage.setItem("tasks", JSON.stringify(tasks));
@@ -25,6 +27,8 @@ export const TaskContextProvider = ({ children }) => {
         setFilter,
         deleteConfirm,
         setDeleteConfirm,
+        searchQuery,
+        setSearchQuery,
       }}
     >
       {children}

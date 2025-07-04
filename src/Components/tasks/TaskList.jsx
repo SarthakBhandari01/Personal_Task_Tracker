@@ -1,18 +1,9 @@
 import { useState } from "react";
-import { useTask } from "../../hooks/useTask";
 import { TaskItem } from "./TaskItem";
 import "./task-list.css";
 
-export const TaskList = () => {
-  const { tasks, filter } = useTask();
-
+export const TaskList = ({ filteredTask }) => {
   const [editingTask, setEditingTask] = useState(null);
-
-  const filteredTask = tasks.filter((task) => {
-    if (filter === "completed") return task.completed;
-    if (filter === "pending") return !task.completed;
-    return true;
-  });
 
   return (
     <div className="task-list">

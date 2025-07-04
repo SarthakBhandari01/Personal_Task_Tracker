@@ -13,7 +13,7 @@ export const TaskItem = ({ task }) => {
     const dt = new Date(date);
     return (
       dt.toLocaleDateString() +
-      " " +
+      "  " +
       dt.toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" })
     );
   };

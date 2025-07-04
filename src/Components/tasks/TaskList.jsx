@@ -7,7 +7,7 @@ export const TaskList = () => {
 
   const filteredTask = tasks.filter((task) => {
     if (filter === "completed") return task.completed;
-    if (filter === "pending") return task.completed;
+    if (filter === "pending") return !task.completed;
     return true;
   });
 

@@ -9,12 +9,15 @@ export const AppRoutes = () => {
     <Routes>
       <Route
         path="/"
-        element={username ? <Navigate to="/tasks" /> : <Login />}
+        element={!username ? <Login /> : <Navigate to="/tasks" replace />}
       />
+
       <Route
         path="/tasks"
-        element={username ? <TaskManager /> : <Navigate to="/" />}
+        element={username ? <TaskManager /> : <Navigate to="/" replace />}
       />
+
+      <Route path="*" element={<Navigate to="/" replace />} />
     </Routes>
   );
 };

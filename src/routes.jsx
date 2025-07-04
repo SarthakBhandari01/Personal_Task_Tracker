@@ -1,6 +1,6 @@
 import { Navigate, Route, Routes } from "react-router-dom";
 import { TaskManager } from "./page/TaskManager";
-import { Login } from "./Components/auth/Login";
+import { Login } from "./Components/auth/login";
 
 export const AppRoutes = () => {
   const username = localStorage.getItem("username");

@@ -5,7 +5,7 @@ import { TaskList } from "../Components/tasks/TaskList";
 import { TaskFilter } from "../Components/tasks/TaskFilter";
 import { Plus } from "lucide-react";
 import { useTask } from "../hooks/useTask";
-import { SearchTask } from "../Components/tasks/seachTask";
+import { SearchTask } from "../Components/tasks/searchTask";
 
 export const TaskManager = () => {
   const [showAddTaskForm, setShowAddTaskForm] = useState(false);

@@ -37,3 +37,19 @@
   outline: 2px solid #3b82f6;
   outline-offset: 2px;
 }
+
+@media (max-width: 768px) {
+  .filter-tabs {
+    flex-direction: column;
+  }
+
+  .filter-tab {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 8px;
+  }
+
+  .filter-tab:last-child {
+    margin-bottom: 0;
+  }
+}

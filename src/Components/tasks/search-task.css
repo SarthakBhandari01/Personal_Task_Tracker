@@ -55,3 +55,9 @@
   color: #64748b;
   transition: all 0.2s ease;
 }
+
+@media (max-width: 768px) {
+  .search-input {
+    padding: 14px 14px 14px 44px;
+  }
+}

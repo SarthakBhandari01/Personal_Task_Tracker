@@ -39,3 +39,9 @@
   justify-content: flex-end;
   margin-top: 8px;
 }
+
+@media (max-width: 480px) {
+  .form-actions {
+    flex-direction: column;
+  }
+}

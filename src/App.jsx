@@ -7,7 +7,7 @@ function App() {
     <TaskContextProvider>
       <TaskManager />
       <Modals />
-    </TaskContextProvider>
+    </TaskContextProvider>  
   );
 }
 

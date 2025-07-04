@@ -3,7 +3,6 @@ import "./task-item.css";
 import { useTask } from "../../hooks/useTask";
 import "../../App.css";
 import "./task-form.css";
-import { DeleteTaskModal } from "../modals/DeleteTaskModal";
 
 export const TaskItem = ({ task, editingTask, setEditingTask }) => {
   const { tasks, setTasks, setDeleteConfirm } = useTask();

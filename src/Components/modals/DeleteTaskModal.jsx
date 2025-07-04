@@ -24,7 +24,7 @@ export const DeleteTaskModal = () => {
       <div className="modal">
         <div className="modal-header">
           <h2>Confirm delete</h2>
-          <button className="btn-close" onClick={() => setDeleteConfirm(null)}>
+          <button className="close-btn" onClick={() => setDeleteConfirm(null)}>
             <X size={16} />
           </button>
         </div>

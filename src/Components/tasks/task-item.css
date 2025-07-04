@@ -166,6 +166,42 @@
   transition: all 0.2s ease;
 }
 
+.edit-form {
+  width: 100%;
+}
+
+.edit-actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+
+.btn-save {
+  background: #10b981;
+  color: white;
+  border: none;
+  padding: 6px 8px;
+  border-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-cancel {
+  background: #ef4444;
+  color: white;
+  border: none;
+  padding: 6px 8px;
+  border-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
 @media (max-width: 480px) {
   .task-header {
     flex-wrap: wrap;

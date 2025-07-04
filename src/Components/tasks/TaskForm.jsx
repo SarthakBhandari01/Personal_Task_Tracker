@@ -1,6 +1,9 @@
 import { useState } from "react";
 import "./task-form.css";
 import { useTask } from "../../hooks/useTask";
+import { X } from "lucide-react";
+import "../../App.css";
+import "./task-form.css";
 
 export const TaskForm = ({ setShowAddTaskForm }) => {
   const [newTask, setNewTask] = useState({ title: "", description: "" });
@@ -26,10 +29,15 @@ export const TaskForm = ({ setShowAddTaskForm }) => {
 
   return (
     <div className="modal-container">
-      <div className=".modal">
+      <div className="modal">
         <div className="modal-header">
           <h1>Add new Task</h1>
-          <button onClick={() => setShowAddTaskForm(false)}>X</button>
+          <button
+            className="close-btn"
+            onClick={() => setShowAddTaskForm(false)}
+          >
+            <X size={16} />
+          </button>
         </div>
         <form onSubmit={handleOnSubmit} className="task-form">
           <div className="form-section">
@@ -46,7 +54,7 @@ export const TaskForm = ({ setShowAddTaskForm }) => {
             />
           </div>
           <div className="form-section">
-            <label htmlFor="desc">desc</label>
+            <label htmlFor="desc">Description</label>
             <textarea
               name="desc"
               id="desc"
@@ -58,11 +66,17 @@ export const TaskForm = ({ setShowAddTaskForm }) => {
               }
             />
           </div>
-          <div>
-            <button type="button" onClick={() => setShowAddTaskForm(false)}>
+          <div className="form-actions">
+            <button
+              type="button"
+              onClick={() => setShowAddTaskForm(false)}
+              className="btn-secondary"
+            >
               Cancel
             </button>
-            <button type="submit">Add Task</button>
+            <button className="btn-primary" type="submit">
+              Add Task
+            </button>
           </div>
         </form>
       </div>

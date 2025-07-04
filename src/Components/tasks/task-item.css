@@ -61,6 +61,12 @@
   margin-bottom: 8px;
 }
 
+.task-actions {
+  display: flex;
+  gap: 8px;
+  margin-left: 12px;
+}
+
 .task-status.pending {
   background: #fef3c7;
   color: #92400e;
@@ -72,7 +78,8 @@
 }
 
 .task-date {
-  color: #94a3b8;
+  color: #71829a;
+  font-weight: 700;
 }
 
 .task-item.completed .task-description {
@@ -142,8 +149,30 @@
   transform: scale(1.1);
 }
 
+.action-btn {
+  padding: 8px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .edit-btn,
 .delete-btn {
   cursor: pointer;
   transition: all 0.2s ease;
+}
+
+@media (max-width: 480px) {
+  .task-header {
+    flex-wrap: wrap;
+  }
+
+  .task-actions {
+    margin-left: 0;
+    margin-top: 12px;
+  }
 }
